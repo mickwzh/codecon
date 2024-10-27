@@ -1,4 +1,4 @@
-[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md) | [**🌐English**](https://github.com/shibing624/similarities/blob/main/README_EN.md) 
+[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md)
 
 <div align="center">
   <a href="https://github.com/mickwzh/codecon">
