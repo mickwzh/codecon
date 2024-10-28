@@ -27,10 +27,10 @@ setup(
         'torch',
         'xlrd',
         'tqdm',
-        'jieaba',
+        'jieba',
         'importlib.resources',
         'psutil',
-        'matplotlib'
+        'matplotlib',
         'seaborn',
         'gensim',
         'bertopic',
