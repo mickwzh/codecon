@@ -183,7 +183,7 @@ def cl_nlp_train(data_raw, language = 'chn', imbalance = 'imbalance', mode = 'ti
     print(f"测试集预测结果已保存至 {test_results_path}")
 
     # Classification report
-    report_str = classification_report(true_labels, pred_labels, output_dict=True)
+    report_str = classification_report(true_labels, pred_labels)
     report_str_dist = classification_report(true_labels, pred_labels, output_dict=True)
     recall = report_str_dist['weighted avg']['recall']
     # Accuracy
