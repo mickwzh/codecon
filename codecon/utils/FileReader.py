@@ -47,7 +47,7 @@ class FileReader:
         if 'text' not in self.df_raw.columns or 'label' not in self.df_raw.columns:
             raise ValueError("Data_raw must contain 'text' and 'label' columns.")
 
-        labels = self.df_raw['label'].tolist()
+        labels = self.df_raw['label'].astype(int).tolist()
         unique_labels = sorted(list(set(labels)))
         # Check if labels are integers and start from 0
         if not all(isinstance(label, int) for label in unique_labels):
