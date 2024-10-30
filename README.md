@@ -68,12 +68,15 @@ pip install codecon
 pip install codecon -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-或者通过github clone此项目
+### 或者通过github clone此项目
 ```python
 git clone https://github.com/mickwzh/codecon.git
 ```
 
-为了方便大家实践codecon, 准备了一个关于情感分类(二分类)的数据集供大家下载，打开浏览器输入
+### 为了方便大家实践codecon, 准备了一个关于情感分类(二分类)的数据集供大家下载  
+
+**百度网盘**: `https://pan.baidu.com/s/1dIrQQnOl6spZv6Jet48eQA?pwd=dvqm 提取码: dvqm`  
+**Dropbox**: `https://www.dropbox.com/scl/fo/9ut3qtfradrde9tp6kslc/ANPvqvIgi2Lkf5t6TDuqiCc?rlkey=iw3seyzgpz9utmnj6xtdgej22&st=cywzuwmc&dl=0`
 
 ## 使用
 ### 环境配置
@@ -88,8 +91,9 @@ python的方便之处在于有大量封装好的工具包；但这些工具包�
 
 **因此，建议在安装`codecon`前配置一个新环境。**
 
-这里提供了适合初学者上手的两种（无代码）创建新环境的方案：[ANACONDA&Spyder(本地运行)]() 和 [Featurize&JupyterNote(在线运行)]() 。点击可获取相应pdf版指南。  
-⚠️ 如果个人电脑没有GPU, 或者无法保证长时间稳定运行，强烈建议[Featurize(服务器租借)]()。
+这里提供了适合初学者上手的两种（无代码）创建新环境的方案：[ANACONDA&Spyder(本地运行)](https://github.com/mickwzh/codecon/blob/main/note/anaconda_intro.pdf) 和 [Featurize&JupyterNote(在线运行)](https://github.com/mickwzh/codecon/blob/main/note/featurize_intro.pdf) 。点击可获取相应pdf版指南。  
+
+⚠️ 如果个人电脑没有GPU, 或者无法保证长时间稳定运行，强烈建议[Featurize(服务器租借)](https://github.com/mickwzh/codecon/blob/main/note/featurize_intro.pdf)。
 
 -----------------
 
@@ -288,6 +292,8 @@ codecon.gai_nlp(data_pred = '替换为你的pred_file文件路径',
 !pip install codecon
 ```
 - 进入Featurize的工作界面后,可直接从本地拖拽文件上传服务器,但是大文件建议从Featurzie首页数据集处上传,再回到工作区下载
+### [一些python基本概念](https://github.com/mickwzh/codecon/blob/main/note/%E5%86%99%E4%B8%8B%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%89%8D%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B%20copy.md)
+### [笔者关于大数据技术应用于经济学研究中的一些思考](https://github.com/mickwzh/codecon/blob/main/note/DataScienceAndSocialScience%20copy.md)
 
 ## 贡献
 项目代码还很粗糙,如果大家对代码有所改进,欢迎提交回本项目,在提交之前,注意以下两点:
