@@ -1,0 +1,7 @@
+codecon_readme
+
+Goal: train a model to predict whether the sentences in pred_file.csv are emotionally positive or negative.
+	-training set: raw_file.csv
+	-test set: pred_file.csv
+
+In raw_file.csv, label = 1 means positive emotion; label = 2 means negative emotion.
