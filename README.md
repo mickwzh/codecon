@@ -1,4 +1,4 @@
-[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md)
+[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md)[**🇬🇧English**](https://github.com/mickwzh/codecon/edit/main/README_eng.md)
 
 <div align="center">
   <a href="https://github.com/mickwzh/codecon">
@@ -222,7 +222,7 @@ codecon.cl_nlp_train(data_raw = '替换为你的raw_file文件路径',
   - `train_test_label.csv`: 20%测试集上的原标签与预测标签,帮助发现哪一类文本模型难以区分
   - `model`: 训练好的模型参数,之后的步骤直接调用,不需要进行任何操作
 
-#### STEP4 使用训练好的模型在剩余样本上做预测
+#### STEP4: 使用训练好的模型在剩余样本上做预测
 - `benchmark`: 分类的本质是模型在不同的类别上预测概率,输出概率最大的那一类。但在经济学研究的文本分析任务中通常无法预设所有类别。 例如,假设一个二分类问题,模型给定`文本X`属于`type1` 49%的概率,`type2` 51%的概率,判定`文本X`属于`type2`。但此时实际上 `type1`不应该归为`type1`,与`type2`的任何一类。  
   - `benchmark = 0` 表示对所有样本进行强制分类；`benchmark = 80` 意味着只有当模型认为一个样本的属于某一类别的概率大于80%时才判定其属于该类别(模型的置信度为80%)
   - 如果模型在所有类别上给定的概率都小于`benchmark`,将该样本标记为 `-1` 类 (`labels = -1`)
@@ -244,7 +244,7 @@ codecon.cl_nlp_pred(data_pred = '替换为你的pred_file文件路径',
 
 🌟使用Kimi大模型作为接口,使用前需在kimi平台申请密钥(很简单,步骤如下),`codecon`不收取任何费用  
 
-#### STEP1 申请kimi密钥
+#### STEP1: 申请kimi密钥
 - 在kimi[官方开发者平台](https://platform.moonshot.cn/console/account)注册账号登陆
 - 在左侧任务栏中点击实名认证并完成认证
 - 点击左侧账户充值
@@ -254,7 +254,7 @@ codecon.cl_nlp_pred(data_pred = '替换为你的pred_file文件路径',
 - 在坐车任务栏中点击API Key管理,点击屏幕右侧新建,随便起个名字
 - 按照指示复制密钥到命令的key中,
 
-### 在pred_file上直接调用大模型
+### STEP2: 在pred_file上直接调用大模型
 - `pred_file.xls` 为之后需要在上面贴标签的数据,包含`text`列
 - `model` 根据输入输出文本长度的需要,选择`moonshot-v1-8k`, `moonshot-v1-32k`, `moonshot-v1-128k`三种模型
 - `task`: 输入你对任务的要求和描述,之后会对`pred_file.xls`中的每一行文本执行该任务
