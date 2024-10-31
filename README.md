@@ -1,4 +1,4 @@
-[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md)   [**🇬🇧English**](https://github.com/mickwzh/codecon/edit/main/README_eng.md)
+[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md) | [**🇬🇧English**](https://github.com/mickwzh/codecon/edit/main/README_eng.md)
 
 <div align="center">
   <a href="https://github.com/mickwzh/codecon">
