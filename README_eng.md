@@ -1,4 +1,4 @@
-[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md)
+[**🇨🇳中文**](https://github.com/mickwzh/codecon/edit/main/README.md) | [**🇬🇧English**](https://github.com/mickwzh/codecon/edit/main/README_eng.md)
 
 <div align="center">
   <a href="https://github.com/mickwzh/codecon">
@@ -19,7 +19,7 @@
   - cl_nlp_findtrain: Training Sample Expansion Based on Text Similarity
   - cl_nlp_train, cl_nlp_pred: Model Training and Prediction Based on BERT
   - gai_nlp: Batch Calls to Generative AI Interfaces
-- [Python Basics for Emergencies](#Basic Python Essentials)
+- [BasicPythonEssentials](#BasicPythonEssentials)
 - [Contact](#Contact)
 
 ## Vision
@@ -103,9 +103,6 @@ Here are two options suitable for beginners to create a new environment without 
 
 ### Data Preparation
 To reduce user workload as much as possible, `codecon`’s full workflow for implementing text classification tasks requires only two simple tables. Please strictly follow the guidelines below to prepare the data:
-
-- 在你喜欢的路径下新建一个文件夹,之后所有的结果与过程文件都将自动保存到该文件夹下
-- 在该文件夹中准备好原表格(`raw_file`)与预测表格(`pred_file`),支持`.csv`,`.xls`,`.xlsx`,接下来以 `.xls` 格式为例
 
 - Create a new folder in a preferred path; all resulting and intermediate files will be automatically saved in this folder.
 - Prepare the raw file (`raw_file`) and prediction file (`pred_file`) in this folder, supporting `.csv`, `.xls`, and `.xlsx` formats. `.xls` is used as an example.
