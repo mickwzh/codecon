@@ -285,7 +285,8 @@ codecon.gai_nlp(data_pred = '替换为你的pred_file文件路径',
 ### 租借服务器
 - 推荐[Featurize](https://featurize.cn/vm/available),注册账号,充一点钱(新注册会送代金券)
 - 按小时租借RTX 4090一枚(1.87/小时)
-- 选择镜像 (`PyTorch`版本较新的环境),点击开始使用
+- 选择镜像 (`PyTorch`版本较新的环境),点击开始使用  
+  ⚠️不要选择`App市场`, 否则不能保证环境正常配置
 - 在 我租用的实例中 点击打开工作区,点击左上角蓝色按钮,新建`Jupyter Notebook`
 - 在第一行敲下(注意加感叹号),安装成功后使用即可
 ```python
