@@ -60,12 +60,12 @@ Dell, M. (2024). Deep learning for economists (No. w32768). National Bureau of E
 ## 安装
 ### 强烈建议新建一个虚拟环境以运行codecon库。如果你很熟悉虚拟环境或租借服务器的步骤，可以直接跳过；如果你是初学者，请一定仔细阅读以下`使用-环境配置`的说明后后再进行安装。
 ```python
-pip install codecon -i --upgrade https://pypi.org/simple
+pip install codecon --upgrade -i https://pypi.org/simple
 ```
 ### 如果安装过于缓慢,可以打开全局梯子后重新pip，或者尝试
 
 ```
-pip install codecon -i --upgrade https://pypi.tuna.tsinghua.edu.cn/simple
+pip install codecon --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 或者通过github clone此项目
