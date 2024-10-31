@@ -15,7 +15,7 @@
 - [使用](#使用)
   - ⚠️环境配置
   - ⚠️数据准备
-  - tp_nlp基于无监督文本聚类的标签启发
+  - tp_nlp:基于无监督文本聚类的标签启发
   - cl_nlp_findtrain:基于文本相似度的训练样本扩展
   - cl_nlp_train,cl_nlp_pred:基于BERT的模型训练与预测
   - gai_nlp:批量调取生成式AI接口
