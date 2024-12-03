@@ -32,7 +32,7 @@
 
 
 
-## codecon v1.1 特点(26 Oct 2024)
+## codecon v1.1 Features(26 Oct 2024)
 Most text analysis tasks in economic research fall under the classification problem. For instance, sentiment analysis (positive sentiment vs. negative sentiment), forward-looking analysis (forward-looking vs. non-forward-looking), and whether a topic is related to digital transformation (related vs. not related to digital transformation).
 
 Prof. Melissa Dell (2024) provided a highly practical workflow for text classification tasks in economic research. This update fully implements and supplements that workflow.
@@ -119,7 +119,7 @@ To reduce user workload as much as possible, `codecon`’s full workflow for imp
 | Apple is a fruit         | 1     |
 | ...                      | ...   |
 
--  pred_file 之后想要在上面贴标签的数据,包含 text 列
+-  pred_file: the file you want to label on based on you trained model, it must include a column of "text"
 
 | text                              |
 |-----------------------------------|
