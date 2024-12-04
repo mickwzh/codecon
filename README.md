@@ -16,10 +16,10 @@
   - ⚠️ Environment Configuration
   - ⚠️ Data Preparation
   - `cl_nlp`: Perform sentiment analysis (e.g., financial reports, analyst reports, reviews, classical texts) and news classification in one line of code.
-  - tp_nlp: Labeling Inspiration Based on Unsupervised Text Clustering
-  - cl_nlp_findtrain: Training Sample Expansion Based on Text Similarity
-  - cl_nlp_train, cl_nlp_pred: Model Training and Prediction Based on BERT
-  - gai_nlp: Batch Calls to Generative AI Interfaces
+  - `tp_nlp`: Labeling Inspiration Based on Unsupervised Text Clustering
+  - `cl_nlp_findtrain `: Training Sample Expansion Based on Text Similarity
+  - `cl_nlp_train`, `cl_nlp_pred`: Model Training and Prediction Based on BERT
+  - `gai_nlp`: Batch Calls to Generative AI Interfaces
 - [BasicPythonEssentials](#BasicPythonEssentials)
 - [Contact](#Contact)
 
