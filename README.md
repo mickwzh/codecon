@@ -15,6 +15,7 @@
 - [Usage](#Usage)
   - ⚠️ Environment Configuration
   - ⚠️ Data Preparation
+  - `cl_nlp`: Perform sentiment analysis (e.g., financial reports, analyst reports, reviews, classical texts) and news classification in one line of code.
   - tp_nlp: Labeling Inspiration Based on Unsupervised Text Clustering
   - cl_nlp_findtrain: Training Sample Expansion Based on Text Similarity
   - cl_nlp_train, cl_nlp_pred: Model Training and Prediction Based on BERT
@@ -127,6 +128,59 @@ To reduce user workload as much as possible, `codecon`’s full workflow for imp
 | Apple stock be in the worst       |
 | Apple is more popular than banana |
 | ...                               |
+-----------------
+
+### Application 0: Calling Pre-trained Models for Text Classification in One Line of Code
+
+🌟 Call pre-trained models for text classification to perform sentiment analysis (financial reports, analyst reports, reviews, classical texts, etc.) and news classification in one line of code.
+
+#### STEP 1: Create a Folder and Prepare the Prediction Table (`pred_file`)
+- `pred_file.xls` is the file that needs labeling. It must include a `text` column.
+- This step does not require `raw_file.xls`.
+
+#### STEP 2: Run the Code with Three Parameters
+- `data_pred`: Path to the `pred_file`.
+- `language`: Specify the language of the text. Use `'chn'` for Chinese or `'eng'` for English.
+- `method`: Choose a method from the table below.
+
+```python
+import codecon
+codecon.cl_nlp(data_pred = 'Replace_with_your_pred_file_path',
+               method = 'financial_sentiment',   # Choose the method from the table below (continuously updated...)
+               language = 'chn')    # 'chn' or 'eng'
+```
+
+If running locally and encountering the error RuntimeError...HTTPSConnectionPool(host='huggingface.co', port=443), enable a global VPN and rerun the code. Alternatively, set a mirror path before importing codecon, as shown below. (Using a rented server avoids such issues.) (How to rent a server)
+
+```python
+import os
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+import codecon
+codecon.cl_nlp(data_pred = 'Replace_with_your_pred_file_path',
+               method = 'financial_sentiment',   # Choose the method from the table below (continuously updated...)
+               language = 'chn')    # 'chn' or 'eng'
+```
+### Chinese Methods (Set language to 'chn')
+
+| Method                  | Features| Possible Output                                                                                          | Model                                             |
+|-------------------------|----|---------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| `'financial_sentiment'`     | Sentiment analysis for financial texts (e.g., financial reports, audit reports)	| positive, neutral, negative                                                                             | bardsai/finance-sentiment-zh-base               |
+| `'reviews_sentiment'`       | Sentiment analysis for daily texts (e.g., social media posts, reviews)	| negative, positive                                                                                     | liam168/c2-roberta-base-finetuned-dianping-chinese |
+| `'guwen_sentiment'`         | Sentiment analysis for classical Chinese texts	| Neg (Negative), ImpNeg (Slightly Negative), Neutral, ImpPos (Slightly Positive), Pos (Positive)	| ethanyt/guwen-sent                              |
+| `'news_classification'`     | Automatic news classification	 | LABEL_0 (Livelihood), LABEL_1 (Culture), LABEL_2 (Entertainment), LABEL_3 (Sports), LABEL_4 (Finance), LABEL_6 (Real Estate), LABEL_7 (Automotive), LABEL_8 (Education), LABEL_9 (Tech), LABEL_10 (Military), LABEL_12 (Travel), LABEL_13 (International), LABEL_14 (Securities), LABEL_15 (Agriculture), LABEL_16 (Esports) | myml/toutiao                                    |
+
+### English Methods (Set language to 'eng')
+
+| Method                  |Features|Possible Output                                                                                          | Model                                              |
+|-------------------------|---|---------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| `'financial_sentiment'`     |Sentiment analysis for financial texts (e.g., financial reports, audit reports)	| positive, neutral, negative                                                                             | ProsusAI/finbert                                  |
+| `'reviews_sentiment'`       |Sentiment analysis for daily texts (e.g., social media posts, reviews)	| positive, neutral, negative                                                                             | cardiffnlp/twitter-roberta-base-sentiment-latest |
+| `'news_classification'`     |Automatic news classification	| arts_&_culture, business_&_entrepreneurs, celebrity_&_pop_culture, diaries_&_daily_life, family, fashion_&_style, film_tv_&_video, fitness_&_health, food_&_dining, gaming, learning_&_educational, music, news_&_social_concern, other_hobbies, relationships, science_&_technology, sports, travel_&_adventure, youth_&_student_life | cardiffnlp/tweet-topic-21-multi                  |
+
+
+#### STEP3: Generate Results in the Same Folder as `pred_file.xls`
+  - `pred_results_method.csv`: Labels each text in pred_file.xls with a category (label) and provides the probability (score) for each label (indicating how likely the model considers the text to belong to that category, which can be used as a continuous variable).
+
 -----------------
 
 ### Application 1: Labeling Inspiration Based on Unsupervised Text Clustering
