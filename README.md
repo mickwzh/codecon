@@ -367,7 +367,9 @@ The project code is still in the early stages. If you have improvements, feel fr
 Once done, you can submit a PR.
 
 ## Contact
-- Email: mickwang@connect.hku.hk
+- Email:
+- mayilan.ma@duke.edu
+- zhaohui.wang@stonybrook.edu
 
 
 
